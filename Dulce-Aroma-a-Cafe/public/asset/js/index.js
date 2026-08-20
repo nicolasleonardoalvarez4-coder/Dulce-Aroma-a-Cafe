@@ -22,7 +22,7 @@ let selectFiltroMerch = ''// guarda la seleccion de la merch
 // nomenclatura BEM
 
 /* para el usuario */
-const users = JSON.parse(localStorage.getItem('usuarios'))
+const users = JSON.parse(localStorage.getItem('usuarios')) || []
 const usuario = JSON.parse(sessionStorage.getItem('usuario'))
 const btnLogin = document.getElementById('loginUsuario')
 /* Historial usuario */
@@ -218,7 +218,7 @@ function verDetalle(id){
 window.addEventListener('load',()=>{
     if(usuario === null){
         btnLogin.innerHTML = `
-                <a href="login.html">
+                <a href="public/login.html">
                     <ion-icon name="person-outline"></ion-icon>
                 </a>
                 `
