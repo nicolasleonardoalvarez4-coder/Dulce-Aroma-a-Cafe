@@ -1,0 +1,383 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #FFF7EC;
+    font-family: 'contenido';
+    color: #422B23;
+}
+
+/* ---- Fuentes Locales ---- */
+
+@font-face {
+    font-family: 'titulo';
+    src: url('../font/stylecasual.otf');
+}
+
+@font-face {
+    font-family: 'contenido';
+    src: url('../font/AnonymousPro-Regular.ttf');
+}
+
+/* ---- Barra de navegacion */
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    height: 100px;
+    color: #FFF7EC;
+    transition: .4s ease;
+}
+
+.scrolled{
+    background-color: #422B23;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.537);
+}
+
+.contenedor-nav {
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0% 10px;
+}
+.contenedor{
+    color: #422B23;
+    text-align: justify;
+}
+.list-group-item{
+    background-color: #FFF7EC;
+    border-bottom: 1px solid #422B23;
+}
+.list-group{
+    width: fit-content;
+}
+
+/* logo */
+.logo {
+    font-size: 3rem;
+    font-family: 'titulo';
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 6.5rem;
+}
+
+header a {
+    color: #FFF7EC;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: #EFD8D6;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* --- hero --- */
+.baner {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.logo-hero {
+    width: 100%;
+    margin-top: -15vh;
+}
+
+h1 {
+    font-family: 'titulo';
+    font-size: 3rem;
+}
+
+/* ---- ofertas de chamba ---- */
+.cards-empleo {
+    color: #FFF7EC;
+    gap: 20px;
+}
+
+.nosotros {
+    background-color: #422B23;
+    border-radius: 15PX;
+    padding: 20px;
+    color: #f7f7f7;
+}
+
+/* ---- responsive ----- */
+
+@media(max-width:950px) {
+    /* -- Barra de navegacion -- */
+
+    /* -- Pie -- */
+    .pie-nombre {
+        font-size: 250%;
+    }
+}
+
+@media(max-width:580px) {
+
+    /* -- Barra de navegacion -- */
+    .logo {
+        font-size: 2rem;
+    }
+
+    .logo img {
+        width: 5rem;
+    }
+
+    .contenedor-nav {
+        padding: 0px 10px;
+    }
+
+    /* ---- Pie de pagina ---- */
+    footer img {
+        width: 70%;
+    }
+}
+
+@media(max-width:400px) {
+
+    /* -- Barra de navegacion -- */
+    .logo img {
+        display: none;
+    }
+}
+
+/*tarjeta de empleado*/
+
+.ofertas {
+    background-color: #422B23;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+/* descripcion del puesto */
+
+.descripcion-puesto {
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* contenedor de etiquetas */
+
+.badges-empleo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* etiquetas visuales */
+
+.badge-info {
+    background-color: #FFF7EC;
+    color: #422B23;
+    padding: 8px 12px;
+    border-radius: 50px;
+    font-size: .9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* boton postularse */
+
+.btn-postularse {
+    border: none;
+    background-color: #D9A066;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-postularse:hover {
+    transform: translateY(-2px);
+}
+
+
+.form-postulacion {
+     background: linear-gradient(
+        180deg,
+        #4c332a,
+        #422B23
+    );
+    color: white;
+    padding: 35px;
+    margin-top: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,.1);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    animation: aparecer .4s ease;
+}
+
+.form-postulacion h2 {
+    text-align: center;
+    color: #d8cfc8;
+    margin-bottom: 15px;
+    font-size: .95rem;
+}
+
+.subtitulo-formulario {
+    text-align: center;
+    color: #dbd6d6;
+    margin-bottom: 20px;
+}
+
+.form-postulacion label {
+    font-size: .95rem;
+    color: #ffffff;
+    margin-bottom: -5px;
+}
+
+
+.form-postulacion input[type="text"],
+.form-postulacion input[type="email"],
+.form-postulacion input[type="tel"] {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #FFF7EC;
+    color: #422B23;
+}
+
+.form-postulacion input:focus {
+    outline: none;
+    border-color: #D9A066;
+    box-shadow: 0 0 12px rgba(217,160,102,.4);
+}
+
+.form-postulacion .archivo-recluta {
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form-postulacion input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 3px;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.politicaPrivacidad {
+    font-size: .95rem;
+    font-weight: normal;
+    color: #f1e6dc;
+    line-height: 1.5;
+}
+
+.politicaPrivacidad a {
+    color: #D9A066;
+    text-decoration: underline;
+}
+
+.politicaPrivacidad a:hover {
+    color: #f0b679;
+}
+.contenedor-politica{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.form-postulacion button {
+    margin-top: 10px;
+    background-color: #D9A066;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.form-postulacion button:hover {
+    background-color: #c58c51;
+    transform: translateY(-2px);
+}
+
+.mensaje-exito {
+    display: none;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
+
+.form-postulacion {
+    animation: aparecer .4s ease;
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* clase usada por javascript */
+.oculto {
+    display: none;
+}
+
+/* mensaje de exito */
+
+@media (max-width: 1200px){
+    .logo-hero{
+        margin-top: -10vh;
+    }
+}
+@media (max-width: 1000px){
+    .logo-hero{
+        margin-top: -8vh;
+    }
+}
+@media (max-width: 760px){
+    .logo-hero{
+        margin-top: -10vh;
+    }
+}
+@media (max-width: 576px){
+    .logo-hero{
+        margin-top: calc(-40vh + 27vh);
+        width: 60vw;
+        margin-left: 17vw;
+    }
+    .titulo{
+        text-align: center;
+        margin-top: -40px;
+        padding-bottom: 20px;
+    }
+}
